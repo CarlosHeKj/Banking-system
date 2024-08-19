@@ -1,15 +1,19 @@
 package application;
 
-import java.util.Locale;
+import java.util.Scanner;
 
-import entities.User;
+import entities.Bank;
 
 public class Program {
 
 	public static void main(String[] args) {
-		Locale.setDefault(Locale.US);
-		User user1 = new User("Carlos", "Henrique", "111.222.333-65", 2000.0);
-		System.out.println(user1);
+		Bank bank = new Bank();
+		Scanner sc = new Scanner(System.in);
+		
+		bank.startBank();
+		
+		sc.close();
+
 	}
 
 }

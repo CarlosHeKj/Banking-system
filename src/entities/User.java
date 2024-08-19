@@ -8,12 +8,15 @@ public class User {
 	private String cpf;
 	private double balance;
 	
-	public User(String firstName, String lastName, String cpf, double balance) {
+	public User() {
+		
+	}
+	public User(String firstName, String lastName, String cpf) {
 		
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.cpf = cpf;
-		this.balance = balance;
+		this.balance = 0.0;
 	}
 
 	public String getFirstName() {
@@ -39,11 +42,12 @@ public class User {
 	public void setBalance(double balance) {
 		this.balance = balance;
 	}
-
 	public String getCpf() {
 		return cpf;
 	}
-
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
 	@Override
 	public int hashCode() {
 		return Objects.hash(cpf);
